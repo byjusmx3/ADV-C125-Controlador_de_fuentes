@@ -14,7 +14,7 @@ leftWristX = 0;
 }
 
 function modelLoaded() {
-  console.log('¡PoseNet está inicializado!');
+  console.log('PoseNet Is Initialized!');
 }
 
 
@@ -22,13 +22,13 @@ function gotPoses(results)
 {
   if(results.length > 0)
   {
-    console.log(resultados);
+    console.log(results);
 
     leftWristX = results[0].pose.leftWrist.x;
     rightWristX = results[0].pose.rightWrist.x;
     difference = floor(leftWristX - rightWristX);
 
-    console.log("muñecaIzquierda  = " + leftWristX  + " muñecaDerechaX = "+ rightWristX + " diferencia = " + difference);
+    console.log("leftWristX  = " + leftWristX  + " rightWristX = "+ rightWristX + " difference = " + difference);
   }
 }
 
